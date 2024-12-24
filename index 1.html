@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav >
+            <ul class="sidebar">
+                <li onclick = hideSidebar()><a href ="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li ><a href ="#services">Services</a></li>
+                <li ><a href ="#pricing">Pricing</a></li>
+                <li ><a href ="#portfolio">Portfolio</a></li>
+                <li ><a href ="#contact">Contact</a></li>
+
+            </ul>
+            <ul>
+                <li ><a href ="#">Digital Agency</a></li>
+                <li ><a href ="#services">Services</a></li>
+                <li ><a href ="#pricing">Pricing</a></li>
+                <li ><a href ="#portfolio">Portfolio</a></li>
+                <li ><a href ="#contact">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+
+            </ul>
+        </nav>
+
+        <div class="bg-text hero">
+            <h3>Welcome to Digital Agency</h3>
+            <h3 style="font-size:10px">Explore,Innovate,Execute!!</h3>
+            &nbsp;&nbsp;
+           <h2><a href="#" class="cta-button">Get Started</a></h2>
+          </div>
+    </header>
+    <main>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Responsive websites that work across all devices.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Apps</h3>
+                <p>Innovative and user-friendly mobile applications.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-search"></i>
+                <h3>SEO Optimization</h3>
+                <p>Improve visibility and rank higher on search engines.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="pricing">
+        <h2>Pricing Plans</h2>
+        <div style="overflow-x:auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Timeframe</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>Web Design</td>
+                      <td>Custom website design tailored to your brand.</td>
+                      <td>$2,500</td>
+                      <td>4 weeks</td>
+                    </tr>
+                    <tr>
+                      <td>SEO Optimization</td>
+                      <td>Improve your website's search engine ranking.</td>
+                      <td>$1,500</td>
+                      <td>3 months</td>
+                    </tr>
+                    <tr>
+                      <td>Social Media Marketing</td>
+                      <td>Manage and grow your social media presence.</td>
+                      <td>$1,000/month</td>
+                      <td>Ongoing</td>
+                    </tr>
+                    <tr>
+                      <td>Branding</td>
+                      <td>Logo and branding strategy for your business.</td>
+                      <td>$3,000</td>
+                      <td>5 weeks</td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="team1.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                  <h2>Jane Doe</h2>
+                  <p class="title">CEO & Founder</p>
+                  <p>Passionate Enterpreneur.</p>
+                  <p>janedoe23@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="team2.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                  <h2>Mike Ross</h2>
+                  <p class="title">Art Director</p>
+                  <p>Creative is my life. Bring Colours to individual lives.</p>
+                  <p>mikeross798@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+         
+            <div class="column">
+              <div class="card">
+                <img src="team3.jpg" alt="John" style="width:100%">
+                <div class="container">
+                  <h2>John Doe</h2>
+                  <p class="title">Designer</p>
+                  <p>Passionate Designer.Build and design Websites. </p>
+                  <p>doeJohn238@yahoo.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    </section>
+    <!--Contact -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+          
+<div class="container">
+    <form action="#">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email" required>
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="india">India</option>
+        <option value="japan">Japan</option>
+        <option value="south korea">South Korea</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="column">
+                <h3>Contact Us</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          <div class="column">
+            <h3>Discover</h3>
+                <h4><a href="#services">Services</a></h4>
+               <h4><a href="#pricing">Pricing</a></h4>
+              <h4><a href="#portfolio">Portfolio</a></h4>
+               <h4> <a href="#contact">Contact</a></h4>
+          </div>
+        </div>
+        <p>&copy; 2024 Digital Agency. All rights reserved.</p>
+    </footer>
+    
+
+     <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'flex';
+            }
+
+            function  hideSidebar(){
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'none';
+            }
+    
+  document.querySelector("form").addEventListener("submit", function (event) {
+    // Prevent the form from submitting by default
+    event.preventDefault();
+
+    // Get form inputs
+    const firstName = document.getElementById("fname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const country = document.getElementById("country").value;
+    const subject = document.getElementById("subject").value.trim();
+
+    // Error messages container
+    let errors = [];
+
+    // Validation for First Name
+    if (firstName === "") {
+      errors.push("First Name cannot be empty.");
+    }
+
+    // Validation for Email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      errors.push("Please enter a valid email address.");
+    }
+
+    // Validation for Country
+    if (country === "") {
+      errors.push("Please select a country.");
+    }
+
+    // Validation for Subject
+    if (subject === "") {
+      errors.push("Subject cannot be empty.");
+    }
+
+    if (errors.length > 0) {
+      alert(errors.join("\n"));
+    } else {
+      alert("Form submitted successfully!");
+      this.submit(); 
+    }
+  });
+
+        </script>
+</body>
+</html>
+
+
