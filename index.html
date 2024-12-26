@@ -259,10 +259,14 @@
               errors.push("First Name cannot be empty.");
           }
 
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailPattern.test(email)) {
-              errors.push("Please enter a valid email address.");
-          }
+           if (email === "") {
+                errors.push("Email cannot be empty.");
+           } else {
+              const emailPattern = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+                 if (!emailPattern.test(email)) {
+                      errors.push("Please enter a valid email address.");
+                  }   
+            }
 
           if (country === "") {
               errors.push("Please select a country.");
