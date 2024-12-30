@@ -10,7 +10,6 @@ body {
   --color2: #181818;
 }
 
-/* Navbar */
 .nav-bar {
   width: 100%;
   display: flex;
@@ -115,54 +114,76 @@ body {
   }
 }
 
-/* Hero Section */
 .hero {
+  position:relative;
   background: url('laptop.jpeg') no-repeat center center/cover;
   height: 100vh;
   color: white;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
-
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+}
 .hero-content {
+  position: relative;
+  z-index: 2; 
   padding: 20px;
+  animation: fadeIn 1.5s ease-out; 
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .hero h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #ff5c5c;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 5px;
-  margin-top: 2rem;
-  transition: background-color 0.3s;
+  font-size: 1.2em;
+    padding: 12px 24px;
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #ff3333;
+  background-color: #d4421f;
+    transform: scale(1.1);
 }
 
-/* Heading */
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-align: center;
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-/* Services Section */
 #services {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -193,7 +214,7 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  width: 280px;
+  width: 350px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -220,72 +241,79 @@ h2 {
   color: #666;
 }
 
-/* Pricing Section */
 #pricing {
-  background-color: #f9f9f9;
-  padding: 50px 20px;
   text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
 }
 
-#pricing h2 {
-  font-size: 2.5rem;
-  color: #333;
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-#pricing .subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 30px;
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #555;
 }
+
 
 .pricing-table-container {
   overflow-x: auto;
-  margin: 0 auto;
-  max-width: 100%;
 }
 
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transform effect */
 }
 
 .pricing-table th,
 .pricing-table td {
-  padding: 15px 20px;
-  text-align: left;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1em;
   border-bottom: 1px solid #ddd;
-  font-size: 1rem;
-  color: #333;
 }
 
 .pricing-table th {
   background-color: #1a426c;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-}
-
-.pricing-table tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-.pricing-table tbody tr:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
 }
 
 .pricing-table td {
-  text-align: center;
-  color: #555;
+  background-color: white;
+}
+
+.pricing-table tr:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  cursor: pointer;
+}
+
+.pricing-table tr:hover td {
+  background-color: #f1f1f1; 
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none; 
 }
 
 
-/*Team Section*/
+.pricing-table td:nth-child(3):hover {
+  color: #ff5733; 
+  font-weight: bold;
+}
+
 #portfolio {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -311,52 +339,33 @@ h2 {
   gap: 20px;
 }
 
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
 .card img {
   width: 100%;
-  height: auto;
+  height: 40%;
   border-bottom: 1px solid #ddd;
 }
 
-.card .container {
-  padding: 20px;
+.container .card  {
+  padding: 10px;
+  margin-bottom: 0px;
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  color: #007bff;
-  margin: 10px 0;
+  font-size: 1rem;
+  color: #007bff; 
 }
 
 .card .title {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 5px 0;
+  
 }
 
 .card .button {
   background-color: #1c3b5b;
   color: #fff;
   border: none;
+  margin-top: 10px;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -364,11 +373,6 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
-.card .button:hover {
-  background-color: #0056b3;
-}
-
-/* Footer Styling */
 footer {
   background-color: #333;
   color: #f9f9f9;
@@ -478,9 +482,32 @@ footer {
   align-items: center;
 }
 
-.card {
-  max-width: 90%;
+.pricing-table {
+  font-size: 1em;
 }
+
+.pricing-table th, .pricing-table td {
+  padding: 10px;
+}
+
+.pricing-table tr {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pricing-table td {
+  display: block;
+  text-align: left;
+  padding: 8px;
+  border: none;
+  position: relative;
+}
+
+.pricing-table thead {
+  display: none; 
+}
+
+
 
 .footer-container {
   flex-direction: column;
@@ -497,8 +524,6 @@ footer {
 
 }
 
-
-/* Input Fields */
 input[type=text], input[type=email],select, textarea {
   width: 100%;
   padding: 12px;
