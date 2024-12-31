@@ -1,6 +1,6 @@
 # Jaanvi_DigiMantra_Assignment1
 
-**Theme: Digital Agency/Portfolio Landing Page**
+Digital Agency
 
 **Core Requirements:**
 
